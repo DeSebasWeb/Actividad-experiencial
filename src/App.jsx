@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import ApartmentCard from './components/ApartmentCard'
+
+const samplePlaces = [
+  { name: "Habitación en Laureles - Estadio", photo:"imagen1.jpeg", valor:"160,056", tiempo:"por 2 noches", estrellas:"4.89"},
+  { name: "Habitación en Laureles - Estadio", photo:"imagen2.jpg", valor:"144,833", tiempo:"por 2 noches", estrellas:"4.97"},
+  { name: "Loft en Laureles - Estadio", photo:"imagen3.jpg", valor:"207,126", tiempo:"por 2 noches", estrellas:"4.88"},
+  { name: "Apartamento en Laureles - Estadio", photo:"imagen4.jpg", valor:"210,241", tiempo:"por 2 noches", estrellas:"4.88"},
+  { name: "Bed and breakfast en Medellín", photo:"imagen5.jpg", valor:"165,040", tiempo:"por 2 noches", estrellas:"4.93"},
+  { name: "Apartamento en Laureles - Estadio", photo:"imagen6.jpg", valor:"300,000", tiempo:"por 2 noches", estrellas:"4.96"}
+];
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    /* Cards de los apartamentos*/
+    <div className="container-fluid px-4 py-4">
+      <div className="d-flex align-items-center justify-content-between mb-3">
+        <h5 className="fw-semibold mb-0">Alojamientos populares en Medellín ›</h5>
+        <div className="d-flex gap-2">
+          <button className="btn btn-sm btn-light rounded-circle p-2" style={{width: '32px', height: '32px'}}>
+            <span>‹</span>
+          </button>
+          <button className="btn btn-sm btn-light rounded-circle p-2" style={{width: '32px', height: '32px'}}>
+            <span>›</span>
+          </button>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      
+      <div className="row g-3">
+        {samplePlaces.map((place, index) => (
+          <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" key={index}>
+            <ApartmentCard apartment={place} />
+          </div>
+        ))}
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
-
 export default App
