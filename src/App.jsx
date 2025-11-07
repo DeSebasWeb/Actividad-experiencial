@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      <Header /> {/* <-- Header aquí */}
+      <Header />
       <SearchBar />
       {/* Cards */}
       <div className="container-fluid px-4 py-4">
