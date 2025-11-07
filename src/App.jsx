@@ -1,5 +1,6 @@
 import './App.css'
 import ApartmentCard from './components/ApartmentCard'
+import SearchBar from './components/SearchBar'
 
 const samplePlaces = [
   { name: "Habitación en Laureles - Estadio", photo:"imagen1.jpeg", valor:"160,056", tiempo:"por 2 noches", estrellas:"4.89"},
@@ -12,8 +13,12 @@ const samplePlaces = [
 
 function App() {
   return (
-    /* Cards de los apartamentos*/
-    <div className="container-fluid px-4 py-4">
+    <>
+      {/* Barra de búsqueda */}
+      <SearchBar />
+
+      {/* Cards de los apartamentos*/}
+      <div className="container-fluid px-4 py-4">
       <div className="d-flex align-items-center justify-content-between mb-3">
         <h5 className="fw-semibold mb-0">Alojamientos populares en Medellín ›</h5>
         <div className="d-flex gap-2">
@@ -34,6 +39,7 @@ function App() {
         ))}
       </div>
     </div>
+    </>
   )
 }
 export default App
