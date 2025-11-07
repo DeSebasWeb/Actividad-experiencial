@@ -1,5 +1,6 @@
 import './App.css'
 import ApartmentCard from './components/ApartmentCard'
+import Header from './components/Header';
 import SearchBar from './components/SearchBar'
 
 const samplePlaces = [
@@ -15,7 +16,7 @@ function App() {
   return (
     <>
       {/* Barra de búsqueda */}
-      <SearchBar />
+      <Header/>
 
       {/* Cards de los apartamentos*/}
       <div className="container-fluid px-4 py-4">

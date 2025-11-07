@@ -211,3 +211,48 @@ body {
     font-size: 12px;
   }
 }
+
+/* Topbar look */
+.topbar { background: #fff; }
+
+/* Nav principal estilo Airbnb */
+.nav-main .nav-link {
+  color: #222;
+  font-weight: 600;
+  padding: .5rem .75rem;
+  position: relative;
+}
+.nav-main .nav-link:hover { color: #000; }
+.nav-main .nav-link.active {
+  color: #000;
+}
+.nav-main .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 8px; right: 8px; bottom: -8px;
+  height: 2px; background: #000; border-radius: 2px;
+}
+
+/* Avatar redondito */
+.avatar-circle {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: #f0f0f0; color: #444; display: grid; place-items: center;
+  font-weight: 700; font-size: 12px;
+}
+
+/* Contenedor de la SearchBar centrada y con pill */
+.search-shell {
+  width: 100%;
+  max-width: 880px;
+  border-radius: 999px;
+  padding: 6px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+}
+
+/* Si tu SearchBar ya trae sus clases, solo mejoramos el botón */
+.search-bar-container { margin: 0; } /* quita márgenes externos */
+.search-button {
+  background: #FF385C; color: #fff; border: none;
+}
+.search-button:hover { filter: brightness(0.95); }
