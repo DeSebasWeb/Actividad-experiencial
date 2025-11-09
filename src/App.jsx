@@ -2,6 +2,7 @@ import './App.css'
 import ApartmentCard from './components/ApartmentCard'
 import Header from './components/Header';
 import SearchBar from './components/SearchBar'
+import Footer from './components/layout/Footer';
 
 const samplePlaces = [
   { name: "Habitación en Laureles - Estadio", photo:"imagen1.jpeg", valor:"160,056", tiempo:"por 2 noches", estrellas:"4.89"},
@@ -40,6 +41,7 @@ function App() {
         ))}
       </div>
     </div>
+     <Footer />
     </>
   )
 }
